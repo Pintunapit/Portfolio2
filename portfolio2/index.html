@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Alex Morgan | Premium Customizable Personal Portfolio</title>
+  <meta name="description" content="Explore the personal portfolio of Alex Morgan, a Full Stack Developer and UI/UX Designer specializing in responsive web design, glassmorphism, and performance optimization.">
+  <meta name="keywords" content="Alex Morgan, Portfolio, Web Developer, Full Stack Engineer, UI/UX Designer, Responsive Design, Glassmorphism, CSS Grid, HTML5, CSS3, JavaScript">
+  <meta name="author" content="Alex Morgan">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alex Morgan | Premium Customizable Personal Portfolio">
+  <meta property="og:description" content="Explore the portfolio of Alex Morgan. Premium web interfaces, high performance, and customizable layout.">
+  <meta property="og:image" content="assets/images/project-web.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Alex Morgan | Premium Customizable Personal Portfolio">
+  <meta property="twitter:description" content="Explore the portfolio of Alex Morgan. Premium web interfaces, high performance, and customizable layout.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS (Animate on Scroll) Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-mode">
+
+  <!-- ==================== BACKGROUND GLOW EFFECTS ==================== -->
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-glow bg-glow-3"></div>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="glass-nav">
+    <div class="nav-container">
+      <a href="#home" class="logo" id="nav-logo">
+        <span class="gradient-text">A</span>Morgan.
+      </a>
+      
+      <!-- Desktop Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Right Controls -->
+      <div class="nav-controls">
+        <button class="icon-btn" id="theme-toggle-btn" aria-label="Toggle light/dark mode">
+          <i class="fa-solid fa-sun" id="theme-icon"></i>
+        </button>
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Open navigation menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== FLOATING THEME PANEL ==================== -->
+  <div class="theme-panel" id="theme-panel">
+    <button class="theme-panel-toggle" id="theme-panel-toggle" aria-label="Customize theme colors">
+      <i class="fa-solid fa-palette"></i>
+    </button>
+    <div class="theme-panel-content">
+      <h4>Accent Color</h4>
+      <div class="accent-options">
+        <span class="accent-dot active" data-accent="indigo" style="background: #6366f1;" title="Indigo"></span>
+        <span class="accent-dot" data-accent="emerald" style="background: #10b981;" title="Emerald"></span>
+        <span class="accent-dot" data-accent="amber" style="background: #f59e0b;" title="Amber"></span>
+        <span class="accent-dot" data-accent="rose" style="background: #f43f5e;" title="Rose"></span>
+        <span class="accent-dot" data-accent="cyan" style="background: #06b6d4;" title="Cyan"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HOME / HERO SECTION ==================== -->
+  <section id="home" class="hero-section">
+    <div class="hero-container container">
+      <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
+        <span class="greeting-badge">Welcome to my space</span>
+        <h1 class="hero-title">Hi, I'm <span class="gradient-text" id="hero-name">Alex Morgan</span></h1>
+        <h2 class="hero-designation">
+          I am a <span class="typing-text" id="typing-text"></span><span class="typing-cursor">|</span>
+        </h2>
+        <p class="hero-intro" id="hero-intro">
+          Loading introduction...
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="hero-cta-projects">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn btn-secondary" id="hero-cta-contact">Contact Me</a>
+        </div>
+      </div>
+      
+      <div class="hero-image-wrapper" data-aos="fade-left" data-aos-duration="1000">
+        <div class="profile-card glass-card">
+          <div class="profile-image-container">
+            <img src="assets/images/profile.png" alt="Alex Morgan Portrait" id="hero-avatar" class="profile-image" loading="lazy">
+          </div>
+          <div class="profile-socials" id="hero-socials">
+            <!-- Dynamic Socials -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="about-section section-padding">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag" id="about-tag">About</span>
+        <h2 class="section-title" id="about-heading">About Me</h2>
+        <p class="section-subtitle" id="about-subheading">Who I Am & What I Do</p>
+      </div>
+
+      <div class="about-content-grid">
+        <div class="about-bio-card glass-card" data-aos="fade-right" data-aos-duration="1000">
+          <h3>My Story</h3>
+          <p id="about-bio">Loading bio...</p>
+          <div class="career-objective-box">
+            <h4><i class="fa-solid fa-bullseye"></i> Career Objective</h4>
+            <p id="about-objective">Loading career objective...</p>
+          </div>
+          <a href="assets/documents/resume-sample.pdf" class="btn btn-primary btn-icon resume-dl-btn" download>
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="about-stats-grid" id="stats-container" data-aos="fade-left" data-aos-duration="1000">
+          <!-- Dynamic Stats Cards -->
+        </div>
+      </div>
+
+      <!-- Experience & Education Timelines -->
+      <div class="timelines-grid section-padding-top">
+        <!-- Education -->
+        <div class="timeline-column" data-aos="fade-up" data-aos-duration="800">
+          <h3 class="timeline-header-title"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <div class="timeline" id="education-timeline">
+            <!-- Dynamic Education Timeline -->
+          </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="timeline-column" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <h3 class="timeline-header-title"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+          <div class="timeline" id="experience-timeline">
+            <!-- Dynamic Experience Timeline -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS SECTION ==================== -->
+  <section id="skills" class="skills-section section-padding bg-section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag">Skills</span>
+        <h2 class="section-title" id="skills-heading">My Skills</h2>
+        <p class="section-subtitle" id="skills-subheading">Expertise & Technologies</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Technical Progress Bars -->
+        <div class="skills-column glass-card" data-aos="fade-right" data-aos-duration="1000">
+          <h3>Technical Expertise</h3>
+          <div class="skills-progress-list" id="technical-skills-list">
+            <!-- Dynamic Progress Bars -->
+          </div>
+        </div>
+
+        <!-- Soft Skills Cards -->
+        <div class="skills-column" data-aos="fade-left" data-aos-duration="1000">
+          <h3>Professional Competencies</h3>
+          <div class="soft-skills-grid" id="soft-skills-list">
+            <!-- Dynamic Soft Skills Cards -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS SECTION ==================== -->
+  <section id="projects" class="projects-section section-padding">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag">Projects</span>
+        <h2 class="section-title" id="projects-heading">Featured Projects</h2>
+        <p class="section-subtitle" id="projects-subheading">Some of My Recent Works</p>
+      </div>
+
+      <!-- Projects Categories Filter -->
+      <div class="projects-filter" id="projects-filter-bar" data-aos="fade-up" data-aos-duration="800">
+        <!-- Dynamic Filter Tags -->
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Dynamic Project Cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ACHIEVEMENTS SECTION ==================== -->
+  <section id="achievements" class="achievements-section section-padding bg-section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag">Credentials</span>
+        <h2 class="section-title" id="achievements-heading">Achievements</h2>
+        <p class="section-subtitle" id="achievements-subheading">Certifications, Awards & Workshops</p>
+      </div>
+
+      <div class="achievements-layout-grid">
+        <div class="achievements-list-container" id="achievements-list" data-aos="fade-right" data-aos-duration="1000">
+          <!-- Dynamic Achievements Items -->
+        </div>
+
+        <div class="certificate-preview-column" data-aos="fade-left" data-aos-duration="1000">
+          <div class="certificate-card glass-card">
+            <div class="certificate-badge"><i class="fa-solid fa-award"></i> Featured</div>
+            <div class="certificate-image-box">
+              <img src="assets/images/certificate.png" alt="Certificate Preview" id="certificate-mockup-img" loading="lazy">
+            </div>
+            <div class="certificate-details">
+              <h4>Verified Credential Showcase</h4>
+              <p>Continuous education is fundamental to staying ahead in software engineering. Below are recognized accomplishments and training programs completed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESUME SECTION ==================== -->
+  <section id="resume" class="resume-section section-padding">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag">Resume</span>
+        <h2 class="section-title" id="resume-heading">My Resume</h2>
+        <p class="section-subtitle" id="resume-subheading">Download or Review My Credentials</p>
+      </div>
+
+      <div class="resume-preview-container" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="resume-preview-card glass-card">
+          <div class="resume-header">
+            <div class="resume-header-info">
+              <h3 id="resume-preview-name">Alex Morgan</h3>
+              <p id="resume-preview-title">Full Stack Engineer</p>
+            </div>
+            <i class="fa-solid fa-file-invoice resume-file-icon"></i>
+          </div>
+          <div class="resume-body">
+            <h4>Key Qualifications:</h4>
+            <ul class="resume-highlights-list" id="resume-highlights">
+              <!-- Dynamic Highlights -->
+            </ul>
+            <div class="resume-actions">
+              <a href="assets/documents/resume-sample.pdf" class="btn btn-primary btn-icon resume-dl-btn" download>
+                <i class="fa-solid fa-download"></i> Download Full Resume (PDF)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="contact-section section-padding bg-section-alt">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up" data-aos-duration="800">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title" id="contact-heading">Contact Me</h2>
+        <p class="section-subtitle" id="contact-subheading">Get In Touch</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Information Info Cards -->
+        <div class="contact-info-column" data-aos="fade-right" data-aos-duration="1000">
+          <h3>Let's Connect</h3>
+          <p class="contact-connect-text">Feel free to reach out for internship opportunities, freelance gigs, general questions, or just to say hi! I'm always open to discussing new projects and creative ideas.</p>
+          
+          <div class="contact-details-list">
+            <div class="contact-detail-item glass-card">
+              <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-detail-text">
+                <span class="contact-label">Email Me</span>
+                <a href="mailto:alex.morgan@example.com" class="contact-value" id="contact-email">alex.morgan@example.com</a>
+              </div>
+            </div>
+
+            <div class="contact-detail-item glass-card">
+              <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-detail-text">
+                <span class="contact-label">Call Me</span>
+                <a href="tel:+15550192834" class="contact-value" id="contact-phone">+1 (555) 019-2834</a>
+              </div>
+            </div>
+
+            <div class="contact-detail-item glass-card">
+              <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-detail-text">
+                <span class="contact-label">Location</span>
+                <span class="contact-value" id="contact-location">San Francisco, CA, USA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social-icons-wrapper">
+            <h4>Follow Me</h4>
+            <div class="contact-social-icons" id="contact-socials">
+              <!-- Dynamic Social Links -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-column glass-card" data-aos="fade-left" data-aos-duration="1000">
+          <h3>Send a Message</h3>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-name">Full Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="form-name" placeholder="John Doe" required>
+                </div>
+                <span class="error-msg" id="name-error">Please enter your name</span>
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-email">Email Address <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                  <input type="email" id="form-email" placeholder="john@example.com" required>
+                </div>
+                <span class="error-msg" id="email-error">Please enter a valid email address</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-subject">Subject <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-tag input-icon"></i>
+                  <input type="text" id="form-subject" placeholder="Project Inquiry" required>
+                </div>
+                <span class="error-msg" id="subject-error">Please enter a subject</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="form-message">Message <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <textarea id="form-message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+                <span class="error-msg" id="message-error">Please enter your message</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+              <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-content-wrapper">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><span class="gradient-text">A</span>Morgan.</a>
+        <p>Building functional and aesthetic web interfaces. Let's create something extraordinary.</p>
+      </div>
+
+      <div class="footer-links-column">
+        <h4>Quick Links</h4>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-socials-column">
+        <h4>Connect</h4>
+        <div class="footer-social-icons" id="footer-socials">
+          <!-- Dynamic Social Icons -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p class="copyright">&copy; <span id="current-year">2026</span> Alex Morgan. All rights reserved.</p>
+        <p class="footer-credits">Designed with <i class="fa-solid fa-heart accent-heart"></i> & Glassmorphism</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BACK TO TOP BUTTON ==================== -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Scroll to top of the page">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Dynamic Content JavaScript Object Configuration -->
+  <script src="js/config.js"></script>
+
+  <!-- AOS (Animate on Scroll) Library Javascript -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+  <!-- Custom Functionality JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>
